@@ -1,4 +1,4 @@
-# Snowflake config reference: https://docs.getdbt.com/reference/warehouse-profiles/snowflake-profile
+# MySQL config reference: https://docs.getdbt.com/reference/warehouse-profiles/mysql-profile
 #
 # Warning: Do not store credentials in this file unless you've take the necessary steps to remove
 # this file from your git commit.
@@ -10,32 +10,32 @@ meltano:
   outputs:
     # TODO: Optionally, revise or add to these profiles to reflect your own environments. Meltano adds dev, staging and prod by default.
     dev:
-      type: snowflake
+      type: mysql
       threads: 2
-      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
-      user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
-      password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
-      role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
-      warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
-      database: "{{ env_var('DBT_SNOWFLAKE_DATABASE') }}"
-      schema: "{{ env_var('DBT_SNOWFLAKE_SCHEMA') }}"
+      account: "{{ env_var('DBT_MYSQL_ACCOUNT') }}"
+      user: "{{ env_var('DBT_MYSQL_USER') }}"
+      password: "{{ env_var('DBT_MYSQL_PASSWORD') }}"
+      role: "{{ env_var('DBT_MYSQL_ROLE') }}"
+      warehouse: "{{ env_var('DBT_MYSQL_WAREHOUSE') }}"
+      database: "{{ env_var('DBT_MYSQL_DATABASE') }}"
+      schema: "{{ env_var('DBT_MYSQL_SCHEMA') }}"
     staging:
-      type: snowflake
+      type: mysql
       threads: 4
-      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
-      user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
-      password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
-      role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
-      warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
-      database: "{{ env_var('DBT_SNOWFLAKE_DATABASE') }}"
-      schema: "{{ env_var('DBT_SNOWFLAKE_SCHEMA') }}"
+      account: "{{ env_var('DBT_MYSQL_ACCOUNT') }}"
+      user: "{{ env_var('DBT_MYSQL_USER') }}"
+      password: "{{ env_var('DBT_MYSQL_PASSWORD') }}"
+      role: "{{ env_var('DBT_MYSQL_ROLE') }}"
+      warehouse: "{{ env_var('DBT_MYSQL_WAREHOUSE') }}"
+      database: "{{ env_var('DBT_MYSQL_DATABASE') }}"
+      schema: "{{ env_var('DBT_MYSQL_SCHEMA') }}"
     prod:
-      type: snowflake
+      type: mysql
       threads: 6
-      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
-      user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
-      password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
-      role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
-      warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
-      database: "{{ env_var('DBT_SNOWFLAKE_DATABASE') }}"
-      schema: "{{ env_var('DBT_SNOWFLAKE_SCHEMA') }}"
+      account: "{{ env_var('DBT_MYSQL_ACCOUNT') }}"
+      user: "{{ env_var('DBT_MYSQL_USER') }}"
+      password: "{{ env_var('DBT_MYSQL_PASSWORD') }}"
+      role: "{{ env_var('DBT_MYSQL_ROLE') }}"
+      warehouse: "{{ env_var('DBT_MYSQL_WAREHOUSE') }}"
+      database: "{{ env_var('DBT_MYSQL_DATABASE') }}"
+      schema: "{{ env_var('DBT_MYSQL_SCHEMA') }}"
